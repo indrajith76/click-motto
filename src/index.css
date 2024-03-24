@@ -7,6 +7,33 @@ body {
   font-family: "Hind", sans-serif;
 }
 
+.loader { 
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fadeInAnimation{
+  opacity: 1;
+  animation: fadeIn 2s;
+}
+
+@keyframes fadeIn {  
+  from {  
+      opacity:0;  
+  }  
+
+  to {  
+      opacity:1;  
+  }  
+}
+
 .primary-bg-color {
   background: #e17800;
 }

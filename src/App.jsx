@@ -6,6 +6,7 @@ import { useState } from "react";
 import CategoryCard from "./components/CategoryCard";
 import { useEffect } from "react";
 import { categories, featureData } from "./allData";
+import Loader from "./components/Loader";
 
 const client = createClient(
   "GT5aKaWC0Bt7m5MAJD9wBCNG0gEyrgAOxClWbzhYkxXAE3WknlPusvHb"
@@ -14,6 +15,7 @@ const client = createClient(
 function App() {
   const [query, setQuery] = useState("Summer");
   const [dataAll, setDataAll] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     client.photos.search({ query, per_page: 11 }).then((photos) => {
@@ -21,14 +23,24 @@ function App() {
     });
   }, [query]);
 
-  return (
-    <section className="main-section">
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  return loading ? (
+    <Loader />
+  ) : (
+    <section className="main-section fadeInAnimation">
       <Navbar />
       <Banner />
       <div className="bg-white productSection">
         <div>
           <p>Top Categories</p>
-          <div className="categories">
+          <div className="categories" data-aos="fade-up">
             {categories.map((category, idx) => (
               <div onClick={() => setQuery(category.text)}>
                 <CategoryCard
@@ -41,7 +53,7 @@ function App() {
           </div>
         </div>
 
-        <div className="second-nav">
+        <div className="second-nav" data-aos="fade-up">
           <div className="navbar">
             <ul className="menu-list">
               <li>All</li>
