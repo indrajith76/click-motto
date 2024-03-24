@@ -1,0 +1,405 @@
+@import url("https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&display=swap");
+@import url("https://use.typekit.net/wsh0poe.css");
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Hind", sans-serif;
+}
+
+.primary-bg-color {
+  background: #e17800;
+}
+
+.secondary-bg-color {
+  background: #818181;
+}
+
+.bg-white {
+  background-color: white;
+}
+
+.bg-none {
+  background: none;
+}
+
+.primary-border-color {
+  border: 1px solid #e17800;
+}
+
+.secondary-border-color {
+  border: 1px solid #818181;
+}
+
+.border-none {
+  border: none;
+}
+
+.text-white {
+  color: white;
+}
+
+.text-gray {
+  color: #818181;
+}
+
+.btn {
+  height: 34px;
+  padding: 7px 14px;
+  border-radius: 5px;
+}
+
+/* main section */
+.main-section {
+  padding: 0 39px;
+}
+
+/* navbar style */
+.navbarTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; 
+}
+
+.navbarTop img {
+  height: 36px;
+  width: 180px;
+}
+
+.navbarTop .menu-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 0;
+}
+
+.menu-toggle {
+  display: none;
+}
+
+/* Banner Style */
+.banner {
+  background: rgba(0, 0, 0, 0.65) url("/src/assets/images/background.png");
+  background-blend-mode: darken;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 208px;
+  padding-bottom: 235px;
+}
+
+.banner-text {
+  text-align: center;
+  color: white;
+  position: relative;
+  width: 850px;
+  margin: auto;
+}
+
+.banner-text h2 {
+  font-size: 44px;
+  margin: 0;
+  font-family: "aileron", sans-serif;
+  text-align: center;
+}
+
+.banner-text div {
+  position: relative;
+  margin: auto;
+}
+.banner-text input {
+  width: 90%;
+  font-size: 22px;
+  padding: 13px 30px;
+  margin: 12px 0;
+  border-radius: 10px;
+  border: none;
+}
+
+.banner-text p {
+  margin: 0;
+  text-align: left;
+  padding-left: 40px;
+}
+
+.banner-text span {
+  position: absolute;
+  bottom: -90px;
+  right: -120px;
+}
+
+/* categories */
+.second-nav .navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 10px 0 0;
+}
+
+.second-nav .menu-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 0;
+  margin: 0;
+}
+
+.productSection {
+  margin: 0 50px;
+  margin-top: -130px;
+  padding: 20px;
+}
+
+.productSection p {
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.categories {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+
+.category-card {
+  position: relative;
+  cursor: pointer;
+}
+
+.category-card img {
+  width: 100%;
+}
+.category-card p {
+  position: absolute;
+  text-align: center;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "aileron", sans-serif;
+  color: white;
+  font-size: 20px;
+}
+
+.overlay {
+  background-color: black;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  opacity: 0.5;
+  mix-blend-mode: color-burn;
+}
+
+/* product section */
+.products {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.products img {
+  width: 100%;
+}
+
+/* feature */
+.feature {
+  background: url("./assets/images/fetureBg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  grid-row: 1;
+  grid-column: 3;
+  padding: 20px 35px;
+}
+
+.feature p {
+  font-size: 26px;
+  color: white;
+}
+
+.feature-author div {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.authorTxt {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 15px;
+}
+
+.authorTxt p {
+  font-size: 23px;
+  margin: 0;
+}
+.authorTxt small {
+  font-size: 15px;
+}
+
+.feature img {
+  width: 70px;
+  height: 70px;
+}
+
+/* responsiveness for small device */
+@media only screen and (max-width: 768px) {
+  /* main section */
+  .main-section {
+    padding: 0 5px;
+  }
+
+  .navbarTop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+  }
+
+  .navbarTop img {
+    height: 36px;
+    width: 180px;
+  }
+
+  .navbarTop .menu-list {
+    list-style: none;
+    display: block;
+    align-items: center;
+    gap: 15px;
+    padding: 0;
+    position: absolute;
+    top: 40px;
+    right: 10px;
+    padding: 20px;
+    background-color: white;
+    z-index: 50;
+  }
+ 
+
+  .menu-toggle {
+    display: block;
+  }
+
+  /* Banner Style */
+  .banner {
+    padding-top: 108px;
+    padding-bottom: 135px;
+  }
+
+  .banner-text {
+    text-align: center;
+    color: white;
+    position: relative;
+    width: 100%;
+    margin: auto;
+  }
+
+  .banner-text h2 {
+    font-size: 30px;
+    margin: 0;
+    font-family: "aileron", sans-serif;
+    text-align: center;
+  }
+
+  .banner-text div {
+    position: relative;
+    margin: auto;
+  }
+  .banner-text input {
+    width: 70%;
+    font-size: 22px;
+    padding: 13px 30px;
+    margin: 12px 0;
+    border-radius: 10px;
+    border: none;
+  }
+
+  .banner-text p {
+    margin: 0;
+    text-align: left;
+    padding-left: 40px;
+  }
+
+  .banner-text span {
+    position: absolute;
+    bottom: -70px;
+    right: 5px;
+  }
+
+  /* categories */
+
+  .productSection {
+    margin: 0 20px;
+    margin-top: -40px;
+    padding: 20px;
+  }
+  .categories {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  /* product section */
+  .second-nav {
+    position: relative;
+  }
+
+  .second-nav .navbar {
+    display: block;
+  }
+
+  .products {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 16px;
+  }
+
+  .products img {
+    width: 100%;
+  }
+
+  /* feature */
+  .feature {
+    grid-row: 1;
+    grid-column: 1;
+    padding: 20px 35px;
+  }
+
+  .feature p {
+    font-size: 26px;
+    color: white;
+  }
+
+  .feature-author div {
+    display: flex;
+    margin-bottom: 15px;
+  }
+
+  .authorTxt {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 15px;
+  }
+
+  .authorTxt p {
+    font-size: 23px;
+    margin: 0;
+  }
+  .authorTxt small {
+    font-size: 15px;
+  }
+
+  .feature img {
+    width: 70px;
+    height: 70px;
+  }
+}
+ 
